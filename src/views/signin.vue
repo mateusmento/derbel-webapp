@@ -1,5 +1,5 @@
 <template>
-	<section class="signin">
+	<section class="container">
 		<header>
 			<h1>Derbel</h1>
 			<h2>Sign in with your account</h2>
@@ -17,7 +17,7 @@
 </template>
 
 <style lang="scss" scoped>
-.signin {
+.container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
