@@ -9,7 +9,7 @@
 			<input class="field" type="text" placeholder="Full Name" />
 			<input class="field" type="text" placeholder="Username" />
 			<input class="field" type="password" placeholder="Password" />
-			<button type="submit">Sign In</button>
+			<button type="submit">Sign Up</button>
 			<small>
 				<router-link to="/signin">Sign in with your account</router-link>
 			</small>
