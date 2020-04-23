@@ -1,5 +1,5 @@
-import { Stage } from './stage.enum';
-import { Task } from './task.model';
+import { Stage } from "./stage.enum";
+import { Task } from "./task.model";
 
 export class Tasks extends Array<Task> {
 	public constructor(...items: Task[]) {
@@ -7,14 +7,14 @@ export class Tasks extends Array<Task> {
 	}
 
 	public get todo() {
-		return this.filter(t => t.stage === Stage.TODO)
+		return this.filter(t => t.stage === Stage.TODO);
 	}
 
 	public get doing() {
-		return this.filter(t => t.stage === Stage.DOING)
+		return this.filter(t => t.stage === Stage.DOING);
 	}
 
 	public get done() {
-		return this.filter(t => t.stage === Stage.DONE)
+		return this.filter(t => t.stage === Stage.DONE);
 	}
 }

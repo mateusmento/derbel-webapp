@@ -1,5 +1,5 @@
 <template>
-	<aside v-if="!task">
+	<aside v-if="task" class="task-details">
 		<h1>Task Title</h1>
 		<ul class="steps">
 			<li v-for="step of task.steps" :key="step.id" class="step">
@@ -24,7 +24,7 @@ import { Task } from "@/model/task.model";
 
 @Component({})
 export default class TaskDetailsComponent extends Vue {
-	private get task(): Task | null {
+	public get task(): Task | null {
 		return this.$store.state.selectedTask;
 	}
 }

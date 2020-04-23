@@ -5,7 +5,7 @@
 			<h2>Sign in with your account</h2>
 		</header>
 
-		<form>
+		<form @submit.prevent="goHome">
 			<input class="field" type="text" placeholder="Username" />
 			<input class="field" type="password" placeholder="Password" />
 			<button type="submit">Sign In</button>
@@ -15,6 +15,16 @@
 		</form>
 	</section>
 </template>
+
+<script>
+export default {
+	methods: {
+		goHome() {
+			this.$router.push("/home");
+		}
+	}
+};
+</script>
 
 <style lang="scss" scoped>
 .container {
@@ -107,19 +117,5 @@ form {
 		font-size: 0.8em;
 		margin-left: 30px;
 	}
-}
-</style>
-
-<style>
-body {
-	background: linear-gradient(
-		250deg,
-		rgba(0, 165, 255, 1) 0%,
-		rgba(0, 194, 251, 1) 23%,
-		rgba(0, 212, 251, 1) 57%,
-		rgba(35, 226, 255, 1) 100%
-	);
-	/* background-position: center; */
-	/* background-size: cover; */
 }
 </style>

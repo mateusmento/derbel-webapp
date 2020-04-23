@@ -1,6 +1,10 @@
 export class User {
-	public constructor(
-		public id: number,
-		public name: string,
-	) {}
+	public profile = {
+		name: "",
+		photo: "/public/logo.png"
+	};
+
+	public constructor(public id: number, name: string) {
+		this.profile.name = name;
+	}
 }

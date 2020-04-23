@@ -1,5 +1,5 @@
 export enum Stage {
-	TODO = 'TODO',
-	DOING = 'DOING',
-	DONE = 'DONE'
+	TODO = "TODO",
+	DOING = "DOING",
+	DONE = "DONE"
 }

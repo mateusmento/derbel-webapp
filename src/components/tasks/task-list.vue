@@ -1,6 +1,12 @@
 <template>
 	<section class="task-list">
-		<div v-for="task of tasks" :key="task.id" class="task">
+		<h3>{{ title }}</h3>
+		<div
+			v-for="task of tasks"
+			:key="task.id"
+			class="task"
+			@click="select(task)"
+		>
 			<button>Completed</button>
 			<span>{{ task.title }}</span>
 		</div>
@@ -12,7 +18,17 @@
 </template>
 
 <script lang="ts">
-export default {
-	props: ["tasks"]
-};
+import { Component, Vue, Prop } from "vue-property-decorator";
+import { Tasks } from "../../model/tasks.collection";
+import { Task } from "../../model/task.model";
+
+@Component({})
+export default class TaskListComponent extends Vue {
+	@Prop() private tasks!: Tasks;
+	@Prop() private title!: string;
+
+	private select(task: Task) {
+		this.$store.dispatch("select", task);
+	}
+}
 </script>
